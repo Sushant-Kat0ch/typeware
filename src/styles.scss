@@ -3,3 +3,24 @@
 @use './assets/layout/layout.scss';
 @use 'primeicons/primeicons.css';
 @use './assets/demo/demo.scss';
+
+.blinking-border {
+    border-left: 3px solid #f97316;
+    /* Initial border style */
+    animation: blink 1s infinite alternate;
+    /* Apply animation */
+}
+
+@keyframes blink {
+    from {
+        border-left-color: #f97316;
+        /* Border color at start */
+    }
+
+    to {
+        border-left-color: transparent;
+        /* Border color at end (invisible) */
+    }
+}
+
+.line-text p span { display: inline-block; }
